@@ -35,7 +35,7 @@ Route::group(['middleware' => 'auth'], function() {
         ], function() {
         Route::resource('pages', App\Http\Controllers\Admin\PageController::class);
         Route::resource('checklist_groups', App\Http\Controllers\Admin\ChecklistGroupController::class);
-        Route::resource('checklists', App\Http\Controllers\Admin\ChecklistController::class);
+        Route::resource('checklist_groups.checklists', App\Http\Controllers\Admin\ChecklistController::class);
     });
     
 

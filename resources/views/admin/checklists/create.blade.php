@@ -6,14 +6,13 @@
             <div class="row">
 
                 <div class="col-md-12">
-                    <form action="{{ route('admin.checklist_groups.update', $checklistGroup) }}" method="post">
+                    <form action="{{ route('admin.checklist_groups.checklists.store', $checklistGroup) }}" method="post">
                         @csrf
-                        @method('PUT')
                         <div class="card">
 
 
 
-                            <div class="card-header">{{ __('Edit Checklist Group') }}</div>
+                            <div class="card-header">{{ __('New Checklist in ') . $checklistGroup->name }}</div>
 
                             <div class="card-body">
 
@@ -32,8 +31,7 @@
                                         <div class="form-group">
                                             <label for="name">{{ __('Name') }}</label>
                                             <input class="form-control" id="name" type="text"
-                                                placeholder="{{ __('Checklist group name') }}" name="name"
-                                                value="{{ $checklistGroup->name }}">
+                                                placeholder="{{ __('Checklist name') }}" name="name">
                                         </div>
                                     </div>
                                 </div>
@@ -42,21 +40,12 @@
 
                             <div class="card-footer">
                                 <button class="btn btn-block btn-primary" type="submit"> Save</button>
-
                             </div>
-                        </div>
                     </form>
                 </div>
-
-                <form id="delete-checklist-group"
-                    action="{{ route('admin.checklist_groups.destroy', $checklistGroup->id) }}" method="post">
-                    @csrf
-                    @method('DELETE')
-                    <button class="btn btn-block btn-danger" type="submit"
-                        onClick="return confirm('{{ __('Are you sure?') }}')">{{ __('Delete This Checklist Group') }}</button>
-                </form>
             </div>
 
         </div>
+    </div>
     </div>
 @endsection
