@@ -1,8 +1,6 @@
 <?php
 
-use App\Http\Controllers\Admin\PageController;
 use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -35,7 +33,9 @@ Route::group(['middleware' => 'auth'], function() {
             'prefix' => 'admin',
             'as' => 'admin.',
         ], function() {
-        Route::resource('pages', PageController::class);
+        Route::resource('pages', App\Http\Controllers\Admin\PageController::class);
+        Route::resource('checklist_groups', App\Http\Controllers\Admin\ChecklistGroupController::class);
+        Route::resource('checklists', App\Http\Controllers\Admin\ChecklistController::class);
     });
     
 
