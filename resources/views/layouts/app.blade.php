@@ -18,48 +18,7 @@
 
 <body class="c-app">
 
-    <div class="c-sidebar c-sidebar-dark c-sidebar-fixed c-sidebar-lg-show" id="sidebar">
-
-        <ul class="c-sidebar-nav">
-            <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="index.html">
-                    <svg class="c-sidebar-nav-icon">
-                        <use xlink:href="{{ asset('vendors/@coreui/icons/svg/free.svg#cil-speedometer') }}"></use>
-                    </svg> Dashboard
-                    <span class="badge badge-info">NEW</span></a>
-            </li>
-
-            <li class="c-sidebar-nav-title">Components</li>
-            <li class="c-sidebar-nav-item c-sidebar-nav-dropdown"><a
-                    class="c-sidebar-nav-link c-sidebar-nav-dropdown-toggle" href="#">
-                    <svg class="c-sidebar-nav-icon">
-                        <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
-                    </svg> Base</a>
-                <ul class="c-sidebar-nav-dropdown-items">
-                    <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="base/breadcrumb.html"><span
-                                class="c-sidebar-nav-icon"></span> Breadcrumb</a></li>
-                </ul>
-            </li>
-
-            <li class="c-sidebar-nav-item">
-                <a class="c-sidebar-nav-link" href="{{ route('logout') }}"
-                   onclick="event.preventDefault();document.getElementById('logout-form').submit();">
-                    <svg class="c-sidebar-nav-icon">
-                        <use xlink:href="{{ asset('vendors/@coreui/icons/svg/free.svg#cil-speedometer') }}"></use>
-                    </svg> {{ __('Logout') }}
-
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                        @csrf
-                    </form>
-                </a>
-            </li>
-
-
-
-
-        </ul>
-        <button class="c-sidebar-minimizer c-class-toggler" type="button" data-target="_parent"
-            data-class="c-sidebar-minimized"></button>
-    </div>
+    @include('partials.sidebar')
 
     <div class="c-wrapper c-fixed-components">
         <header class="c-header c-header-light c-header-fixed c-header-with-subheader">
@@ -145,6 +104,7 @@
     </div>
 
 
+    
     <!-- Optional JavaScript -->
     <!-- Popper.js first, then CoreUI JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/1.5.0/perfect-scrollbar.min.js" integrity="sha512-yUNtg0k40IvRQNR20bJ4oH6QeQ/mgs9Lsa6V+3qxTj58u2r+JiAYOhOW0o+ijuMmqCtCEg7LZRA+T4t84/ayVA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
