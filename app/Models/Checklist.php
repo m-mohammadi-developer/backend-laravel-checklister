@@ -2,9 +2,10 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Task;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Checklist extends Model
 {
@@ -13,5 +14,11 @@ class Checklist extends Model
     protected $fillable = [
         'name', 'checklist_group_id'
     ];
+
+
+    public function tasks()
+    {
+        return $this->hasMany(Task::class);
+    }
 
 }

@@ -47,9 +47,9 @@ class ChecklistController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param ChecklistGroup $checklistGroup
-     * @param Checklist $checklist
-     * @return \Illuminate\Http\Response
+     * @param  mixed $checklistGroup
+     * @param  mixed $checklist
+     * @return void
      */
     public function edit(ChecklistGroup $checklistGroup, Checklist $checklist)
     {

@@ -31,7 +31,7 @@
                                         <div class="form-group">
                                             <label for="name">{{ __('Name') }}</label>
                                             <input class="form-control" id="name" type="text"
-                                                placeholder="{{ __('Checklist group name') }}" name="name">
+                                                placeholder="{{ __('Checklist group name') }}" name="name" value="{{ old('name') }}">
                                         </div>
                                     </div>
                                 </div>
